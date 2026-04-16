@@ -88,52 +88,52 @@ const Icon = ({ name, className = "" }) => {
 };
 
 // ── Eye SVG placeholder (the product visual) ──────────────────────────────
-const OcularMaskSVG = () => (
-  <svg viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-    <defs>
-      <radialGradient id="maskGrad" cx="50%" cy="40%" r="60%">
-        <stop offset="0%" stopColor="#e8f0ff" />
-        <stop offset="100%" stopColor="#c5d8f0" />
-      </radialGradient>
-      <radialGradient id="eyeGrad" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#6ab0e8" />
-        <stop offset="60%" stopColor="#2d7db8" />
-        <stop offset="100%" stopColor="#1a4a7a" />
-      </radialGradient>
-      <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="8" stdDeviation="12" floodColor="#0057ce" floodOpacity="0.15" />
-      </filter>
-    </defs>
-    {/* Main mask body */}
-    <ellipse cx="210" cy="165" rx="175" ry="110" fill="url(#maskGrad)" filter="url(#softShadow)" rx2="175" />
-    <ellipse cx="210" cy="160" rx="170" ry="105" fill="#ddeaf8" />
-    {/* Left eye chamber */}
-    <ellipse cx="145" cy="155" rx="55" ry="42" fill="#b8cfe8" />
-    <ellipse cx="145" cy="155" rx="45" ry="34" fill="#8fb8e0" />
-    <circle cx="145" cy="155" r="28" fill="url(#eyeGrad)" />
-    <circle cx="145" cy="155" r="14" fill="#1a2a4a" />
-    <circle cx="145" cy="155" r="8" fill="#0d1a2e" />
-    <circle cx="137" cy="148" r="4" fill="white" opacity="0.7" />
-    {/* Right eye chamber */}
-    <ellipse cx="275" cy="155" rx="55" ry="42" fill="#b8cfe8" />
-    <ellipse cx="275" cy="155" rx="45" ry="34" fill="#8fb8e0" />
-    <circle cx="275" cy="155" r="28" fill="url(#eyeGrad)" />
-    <circle cx="275" cy="155" r="14" fill="#1a2a4a" />
-    <circle cx="275" cy="155" r="8" fill="#0d1a2e" />
-    <circle cx="267" cy="148" r="4" fill="white" opacity="0.7" />
-    {/* Bridge */}
-    <path d="M190 155 Q210 145 230 155" stroke="#a0bcda" strokeWidth="3" fill="none" />
-    {/* Side straps */}
-    <path d="M35 155 Q55 155 75 160" stroke="#a0bcda" strokeWidth="12" strokeLinecap="round" fill="none" />
-    <path d="M345 155 Q365 155 385 160" stroke="#a0bcda" strokeWidth="12" strokeLinecap="round" fill="none" />
-    {/* Status LED */}
-    <circle cx="210" cy="235" r="6" fill="#0057ce" opacity="0.8" />
-    <circle cx="210" cy="235" r="10" fill="#0057ce" opacity="0.2" />
-    {/* Top detail */}
-    <path d="M130 120 Q210 105 290 120" stroke="#b8cfe8" strokeWidth="2" fill="none" />
-    <text x="210" y="285" textAnchor="middle" fill="#566166" fontSize="11" fontFamily="Manrope" fontWeight="700" letterSpacing="3">OCULAR</text>
-  </svg>
-);
+// const OcularMaskSVG = () => (
+//   <svg viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+//     <defs>
+//       <radialGradient id="maskGrad" cx="50%" cy="40%" r="60%">
+//         <stop offset="0%" stopColor="#e8f0ff" />
+//         <stop offset="100%" stopColor="#c5d8f0" />
+//       </radialGradient>
+//       <radialGradient id="eyeGrad" cx="50%" cy="50%" r="50%">
+//         <stop offset="0%" stopColor="#6ab0e8" />
+//         <stop offset="60%" stopColor="#2d7db8" />
+//         <stop offset="100%" stopColor="#1a4a7a" />
+//       </radialGradient>
+//       <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+//         <feDropShadow dx="0" dy="8" stdDeviation="12" floodColor="#0057ce" floodOpacity="0.15" />
+//       </filter>
+//     </defs>
+//     {/* Main mask body */}
+//     <ellipse cx="210" cy="165" rx="175" ry="110" fill="url(#maskGrad)" filter="url(#softShadow)" rx2="175" />
+//     <ellipse cx="210" cy="160" rx="170" ry="105" fill="#ddeaf8" />
+//     {/* Left eye chamber */}
+//     <ellipse cx="145" cy="155" rx="55" ry="42" fill="#b8cfe8" />
+//     <ellipse cx="145" cy="155" rx="45" ry="34" fill="#8fb8e0" />
+//     <circle cx="145" cy="155" r="28" fill="url(#eyeGrad)" />
+//     <circle cx="145" cy="155" r="14" fill="#1a2a4a" />
+//     <circle cx="145" cy="155" r="8" fill="#0d1a2e" />
+//     <circle cx="137" cy="148" r="4" fill="white" opacity="0.7" />
+//     {/* Right eye chamber */}
+//     <ellipse cx="275" cy="155" rx="55" ry="42" fill="#b8cfe8" />
+//     <ellipse cx="275" cy="155" rx="45" ry="34" fill="#8fb8e0" />
+//     <circle cx="275" cy="155" r="28" fill="url(#eyeGrad)" />
+//     <circle cx="275" cy="155" r="14" fill="#1a2a4a" />
+//     <circle cx="275" cy="155" r="8" fill="#0d1a2e" />
+//     <circle cx="267" cy="148" r="4" fill="white" opacity="0.7" />
+//     {/* Bridge */}
+//     <path d="M190 155 Q210 145 230 155" stroke="#a0bcda" strokeWidth="3" fill="none" />
+//     {/* Side straps */}
+//     <path d="M35 155 Q55 155 75 160" stroke="#a0bcda" strokeWidth="12" strokeLinecap="round" fill="none" />
+//     <path d="M345 155 Q365 155 385 160" stroke="#a0bcda" strokeWidth="12" strokeLinecap="round" fill="none" />
+//     {/* Status LED */}
+//     <circle cx="210" cy="235" r="6" fill="#0057ce" opacity="0.8" />
+//     <circle cx="210" cy="235" r="10" fill="#0057ce" opacity="0.2" />
+//     {/* Top detail */}
+//     <path d="M130 120 Q210 105 290 120" stroke="#b8cfe8" strokeWidth="2" fill="none" />
+//     <text x="210" y="285" textAnchor="middle" fill="#566166" fontSize="11" fontFamily="Manrope" fontWeight="700" letterSpacing="3">OCULAR</text>
+//   </svg>
+// );
 
 // ── EyeSVG for solution section ────────────────────────────────────────────
 const EyeCloseSVG = () => (
@@ -764,11 +764,11 @@ function Footer() {
         <span className="text-lg font-headline font-black text-on-background">Ocular</span>
         <div className="flex flex-wrap justify-center gap-8 text-xs uppercase tracking-widest text-on-surface-variant">
           {links.map(l => (
-            <a key={l} href="#" className="hover:text-on-background transition-colors">{l}</a>
+            <a key={l} href="/" className="hover:text-on-background transition-colors">{l}</a>
           ))}
         </div>
         <p className="text-xs uppercase tracking-widest text-on-surface-variant text-center md:text-right">
-          © 2024 Ocular Wellness Tech. All rights reserved.
+          © 2026 Ocular. All rights reserved. <br /> Designed and developed by Harsh Jagtap(Team Ocular).
         </p>
       </div>
     </footer>
