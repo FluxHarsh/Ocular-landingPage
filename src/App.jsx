@@ -137,51 +137,7 @@ const OcularMaskSVG = () => (
 
 // ── EyeSVG for solution section ────────────────────────────────────────────
 const EyeCloseSVG = () => (
-  <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-    <defs>
-      <radialGradient id="bgGrad2" cx="50%" cy="50%" r="70%">
-        <stop offset="0%" stopColor="#0d1a3a" />
-        <stop offset="100%" stopColor="#020810" />
-      </radialGradient>
-      <radialGradient id="irisGrad" cx="35%" cy="35%" r="65%">
-        <stop offset="0%" stopColor="#7bbfee" />
-        <stop offset="40%" stopColor="#3888cc" />
-        <stop offset="100%" stopColor="#0a4a88" />
-      </radialGradient>
-      <filter id="glow">
-        <feGaussianBlur stdDeviation="6" result="coloredBlur" />
-        <feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge>
-      </filter>
-    </defs>
-    <rect width="500" height="400" fill="url(#bgGrad2)" rx="24" />
-    {/* Iris */}
-    <circle cx="250" cy="200" r="110" fill="url(#irisGrad)" filter="url(#glow)" />
-    {/* Iris detail lines */}
-    {Array.from({ length: 16 }).map((_, i) => {
-      const angle = (i * 22.5 * Math.PI) / 180;
-      return (
-        <line key={i} x1={250 + 40 * Math.cos(angle)} y1={200 + 40 * Math.sin(angle)}
-          x2={250 + 108 * Math.cos(angle)} y2={200 + 108 * Math.sin(angle)}
-          stroke="rgba(100,180,240,0.3)" strokeWidth="1" />
-      );
-    })}
-    {/* Pupil */}
-    <circle cx="250" cy="200" r="42" fill="#080e1c" />
-    {/* Catchlight */}
-    <circle cx="228" cy="182" r="14" fill="white" opacity="0.15" />
-    <circle cx="232" cy="186" r="7" fill="white" opacity="0.35" />
-    {/* Eyelid top */}
-    <path d="M80 200 Q250 50 420 200" stroke="#1a2a3a" strokeWidth="3" fill="none" />
-    {/* Glow ring */}
-    <circle cx="250" cy="200" r="115" stroke="#3888cc" strokeWidth="1.5" opacity="0.4" fill="none" />
-    <circle cx="250" cy="200" r="125" stroke="#3888cc" strokeWidth="0.8" opacity="0.2" fill="none" />
-    {/* Temperature badge */}
-    <rect x="340" y="60" width="110" height="44" rx="12" fill="rgba(0,87,206,0.25)" />
-    <text x="395" y="77" textAnchor="middle" fill="#7bbfee" fontSize="10" fontFamily="Inter" fontWeight="600">TEMP</text>
-    <text x="395" y="94" textAnchor="middle" fill="white" fontSize="16" fontFamily="Manrope" fontWeight="800">20°C</text>
-    {/* Mask overlay hint */}
-    <path d="M80 200 Q250 320 420 200" stroke="#1a3a5a" strokeWidth="2" fill="rgba(10,20,40,0.5)" />
-  </svg>
+  <img src="./heroImg.jpeg" alt="Ocular Mask in use" className="w-full h-full object-cover" />
 );
 
 // ── Chart SVG for market section ───────────────────────────────────────────
